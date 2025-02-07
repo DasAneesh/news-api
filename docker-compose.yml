@@ -97,6 +97,12 @@ services:
     networks:
       - backend
 
+  weatherapi:
+    image: ${DOCKER_REGISTRY-}weatherapi
+    build:
+      context: .
+      dockerfile: WeatherAPI\Dockerfile
+
 volumes:
   pgadmin-data:
   news-data:
